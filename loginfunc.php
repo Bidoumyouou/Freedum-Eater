@@ -37,6 +37,8 @@ function isLogin(){
 	if(__DEBUG__){
 		echo $row['name'];
 	}
+	$_SESSION['UserID'] = $row['id'];
+
 	mysqli_free_result($res);
 	
 	return $row['name'];
@@ -44,6 +46,7 @@ function isLogin(){
 
 function logout(){
 	$_SESSION['Username'] = null;
+	$_SESSION['UserID'] = null;
 	return true;
 }
 ?>

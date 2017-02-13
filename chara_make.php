@@ -60,7 +60,7 @@ for($i = 0;$i < 3; $i++){
       </ul>
    </div>
    <div id="topicPath">
-      <a href="index.html">ホーム</a> &raquo; カテゴリ &raquo; ページ
+      <a href="index.php">ホーム</a> &raquo; カテゴリ &raquo; ページ
    <!-- /#topicPath --></div>
    <div id="contents">
 		<div id="main">
@@ -87,17 +87,17 @@ for($i = 0;$i < 3; $i++){
          <div class="section">
             <h3>カテゴリ</h3>
             <ul>
-               <li><a href="index.html">サブメニュー1</a></li>
-               <li><a href="index.html">サブメニュー2</a></li>
-               <li><a href="index.html">サブメニュー3</a></li>
+               <li><a href="index.php">サブメニュー1</a></li>
+               <li><a href="index.php">サブメニュー2</a></li>
+               <li><a href="index.php">サブメニュー3</a></li>
             </ul>
          <!-- /.section --></div>
          <div class="section">
             <h3>カテゴリ</h3>
             <ul>
-               <li><a href="index.html">サブメニュー4</a></li>
-               <li><a href="index.html">サブメニュー5</a></li>
-               <li><a href="index.html">サブメニュー6</a></li>
+               <li><a href="index.php">サブメニュー4</a></li>
+               <li><a href="index.php">サブメニュー5</a></li>
+               <li><a href="index.php">サブメニュー6</a></li>
             </ul>
          <!-- /.section --></div>
       <!-- /#sub --></div>

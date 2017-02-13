@@ -44,12 +44,13 @@ if(isSet($_SESSION['Username']) && $_SESSION['Username'] != null){
 			echo("ようこそ".$_SESSION['Username']."さん！");
 		}else{
 			echo('<a href="login.php" class="active">ログイン</a>');
+			echo('<p><a href="createaccount.php" class="active">アカウント作成</a>');
 		}
 		?>
 	</div>
 	<div id="menu">
       <ul>
-         <li><a href="index.php" class="active">メニュー1</a></li>
+         <li><a href="index.php" class="active">キャラクター作成</a></li>
          <li><a href="index.php">メニュー2</a></li>
          <li><a href="index.php">メニュー3</a></li>
          <li><a href="index.php">メニュー4</a></li>
@@ -57,7 +58,7 @@ if(isSet($_SESSION['Username']) && $_SESSION['Username'] != null){
       </ul>
    </div>
    <div id="topicPath">
-      <a href="index.html">ホーム</a> &raquo; カテゴリ &raquo; ページ
+      <a href="index.php">ホーム</a> &raquo; カテゴリ &raquo; ページ
    <!-- /#topicPath --></div>
    <div id="contents">
 		<div id="main">
@@ -68,17 +69,17 @@ if(isSet($_SESSION['Username']) && $_SESSION['Username'] != null){
          <div class="section">
             <h3>カテゴリ</h3>
             <ul>
-               <li><a href="index.html">サブメニュー1</a></li>
-               <li><a href="index.html">サブメニュー2</a></li>
-               <li><a href="index.html">サブメニュー3</a></li>
+               <li><a href="index.php">サブメニュー1</a></li>
+               <li><a href="index.php">サブメニュー2</a></li>
+               <li><a href="index.php">サブメニュー3</a></li>
             </ul>
          <!-- /.section --></div>
          <div class="section">
             <h3>カテゴリ</h3>
             <ul>
-               <li><a href="index.html">サブメニュー4</a></li>
-               <li><a href="index.html">サブメニュー5</a></li>
-               <li><a href="index.html">サブメニュー6</a></li>
+               <li><a href="index.php">サブメニュー4</a></li>
+               <li><a href="index.php">サブメニュー5</a></li>
+               <li><a href="index.php">サブメニュー6</a></li>
             </ul>
          <!-- /.section --></div>
       <!-- /#sub --></div>

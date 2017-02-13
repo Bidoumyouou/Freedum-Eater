@@ -34,10 +34,22 @@ function checkparamtotal(){
 	return true;
 }
 
+function isPost2(){
+	if(isset($_POST['name']) || isset($_POST['hp']) || isset($_POST['atk']) 
+		|| isset($_POST['def']) || isset($_POST['spd']) ){
+			return true;
+	}else{
+		return false;
+	}
+
+}
+
 function makecharactor(){
 	global $conn;
 	//errorのビット 
 	$error = 0x0;
+	//初めてだったら
+	if(!isPost2()){return 0;}
 	//項目が埋まっていなかったら(ビット下１桁目)
 	if(!isPost()){$error += 1 ;}
 	//HPなどが整数ではなかったら(ビット下2桁目)
@@ -48,6 +60,7 @@ function makecharactor(){
 	if($error != 0){
 		return $error;
 	}
+	$userID = $_SESSION['UserID'];
 	//SQLを作成してinsertする
 	$condition = "'".$_POST['name']."','".$_POST['hp']."','".$_POST['atk']."','".$_POST['def']."','".$_POST['spd']."','".$_POST['type']."','".$userID."'";
 	$sql = "INSERT INTO `charactor` (`name`,`hp`,`atk`,`def`,`spd`,`type`,`user`)";

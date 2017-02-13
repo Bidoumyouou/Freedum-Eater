@@ -3,6 +3,7 @@ require("common.php");
 
 require("db_common.php");
 
+require("battlefunc.php");
 $isLogin = false;
 if(isSet($_SESSION['Username'])){
 	$isLogin = true;
@@ -44,6 +45,7 @@ if(isSet($_SESSION['Username'])){
 	</div>
 	<div id="menu">
       <ul>
+		 
          <li><a href="chara_make.php" class="active">キャラクター作成</a></li>
          <li><a href="battle.php">バトルする</a></li>
          <li><a href="index.php">成績をみる</a></li>
@@ -56,9 +58,19 @@ if(isSet($_SESSION['Username'])){
    <!-- /#topicPath --></div>
    <div id="contents">
 		<div id="main">
-		   <h2>ようこそ！FreedumEaterの世界へ！</h2>
-				<p>Freedum Eaterではあなただけのキャラクターを使ったバトルストーリーを演出できます。</p>
-
+		   <h2>対戦メニュー</h2>
+				<p>対戦するあなたのキャラクターを選んでください。(ログインしていない場合，デフォルトキャラクターが使えます。)</p>
+				<form action = "battle.php" method = "post">
+				あなたのキャラクター：<?php make_select_chara(0);?><br />
+				対戦するキャラクター：<?php make_select_chara(1);?><br />
+				<input type = "submit" name = "submit" value = "対戦！"><br />
+				</form>
+				<?php
+				//戦闘処理
+					if(isset($_POST['submit'])){
+						Battle();
+					}
+				?>
 		</div>
    </div>
    <div id="sub">
